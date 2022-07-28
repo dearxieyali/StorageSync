@@ -7,8 +7,6 @@ import os
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
     srcConnStr = os.environ["srcConnStr"]
-    srcConnStr123 = os.environ["123"]
-
     src_con = req.params.get('srcCon')
     dst_con = req.params.get('dstCon')
     src_conn_str = req.params.get('srcConnStr')
